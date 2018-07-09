@@ -5,5 +5,6 @@ const TOKEN = '611698842:AAHcE4x2vl1v0ygvtLKqnkq1arbsgAhvlkg'
 const bot = new TelegramBot(TOKEN, {polling: true})
 
 bot.on('message', msg => {
-    bot.sendMessage(msg.chat.id, `Hello, ${msg.from.first_name}`)
-})
+    if (msg.new_chat_members != undefined) {
+    bot.sendMessage(message.chat.id, message.new_chat_member.username + " joined!"); }
+});
